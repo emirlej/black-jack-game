@@ -2,8 +2,6 @@ import kotlin.random.Random
 
 fun shuffleDeck(deck: MutableList<String>): MutableList<String> {
     val seedNumber = Random.nextInt(1, 101)
-    //println(seedNumber)
-    println(Random(seedNumber))
     deck.shuffle(Random(seedNumber))
     return deck
 }
