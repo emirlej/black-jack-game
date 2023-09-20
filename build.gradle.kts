@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-    kotlin("jvm") version "1.5.31"
+    kotlin("jvm") version "1.8.10"
     id("com.github.johnrengelman.shadow") version "5.2.0"
     application
 }
@@ -41,4 +41,7 @@ shadowJar.apply {
     archiveBaseName.set("black-jack-game")
     archiveVersion.set("1.0.0")
     archiveClassifier.set("")
+}
+tasks.jar {
+    enabled = false
 }
