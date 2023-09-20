@@ -1,3 +1,5 @@
+package com.emir.learning.kotlin
+
 import kotlin.random.Random
 
 fun shuffleDeck(deck: MutableList<String>): MutableList<String> {
@@ -87,17 +89,14 @@ fun main() {
     dealer.draw(deck, 1)
 
     if (sam.handScore == 21 && sam.drawNumber == 1) {
-        println("Sam has blackjack! Sam wins!")
         sam.hasWon = true
     } else if (dealer.handScore == 22 && dealer.drawNumber == 1) {
-        println("Dealer has 22! Dealer wins!")
         dealer.hasWon = true
     } else {
         // Don't like the two while loops below
         while (sam.handScore < 17) {
             sam.draw(deck)
             if (sam.handScore > 21) {
-                println("Sam has busted! Dealer wins!")
                 dealer.hasWon = true
                 break
             }
@@ -105,7 +104,6 @@ fun main() {
         while (dealer.handScore <= sam.handScore && !dealer.hasWon) {
             dealer.draw(deck)
             if (dealer.handScore > 21) {
-                println("Dealer has busted! Sam wins!")
                 sam.hasWon = true
                 break
             }
