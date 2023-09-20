@@ -3,8 +3,8 @@ Hello 👋! I've created a simpe black jack game using Kotlin. It's been tested 
 
 ## Main files
 There are two main files created for this purpose, namely: 
-1. Actual black jack code: `src/main/kotlin/Main.kt`
-2. Couple of unit tests: `src/test/kotlin/BlackJackGameTest.kt`
+1. Actual black jack code: [src/main/kotlin/Main.kt](src/main/kotlin/Main.kt)
+2. Couple of unit tests: [src/test/kotlin/BlackJackGameTest.kt](src/test/kotlin/BlackJackGameTest.kt)
 
 Both can be run from inside IntelliJ. When the black jack code (1) is run, the program spits the dealer vs sam game and prints the result looking like:
 ```shell
