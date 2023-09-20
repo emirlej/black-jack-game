@@ -15,9 +15,13 @@ Sam: [S6, H9, S3], 18
 Dealer: [DA, SQ], 21
 ```
 
-## Did not complete
+## :x: Did not complete
 I have not had time to:
-1. compile the `JAR` file correctly and run it from the terminal.
+1. compile the `JAR` file correctly and run it from the terminal. I getting the error below 🤔: 
+```shell
+❯ java -jar build/libs/black-jack-game-1.0-SNAPSHOT.jar     
+no main manifest attribute, in build/libs/black-jack-game-1.0-SNAPSHOT.jar
+```
 2. Currently the code creates a shuffled card deck using a random seed number between 1 and 100. But, the result will always be the same if the seed number is constant. 
 
    
