@@ -1,7 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-    kotlin("jvm") version "1.8.10"
+    kotlin("jvm") version "1.5.31"
+    id("com.github.johnrengelman.shadow") version "5.2.0"
     application
 }
 
@@ -28,5 +30,15 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClassName = "com.emir.learning.kotlin.MainKt"
+}
+
+val shadowJar = tasks.getByName("shadowJar") as ShadowJar
+shadowJar.apply {
+    manifest {
+        attributes["Main-Class"] = "com.emir.learning.kotlin.MainKt"
+    }
+    archiveBaseName.set("black-jack-game")
+    archiveVersion.set("1.0.0")
+    archiveClassifier.set("")
 }
