@@ -93,9 +93,9 @@ fun main() {
         println("Dealer has 22! Dealer wins!")
         dealer.hasWon = true
     } else {
+        // Don't like the two while loops below
         while (sam.handScore < 17) {
             sam.draw(deck)
-            //sam.showHand()
             if (sam.handScore > 21) {
                 println("Sam has busted! Dealer wins!")
                 dealer.hasWon = true
@@ -104,7 +104,6 @@ fun main() {
         }
         while (dealer.handScore <= sam.handScore && !dealer.hasWon) {
             dealer.draw(deck)
-            //dealer.showHand()
             if (dealer.handScore > 21) {
                 println("Dealer has busted! Sam wins!")
                 sam.hasWon = true

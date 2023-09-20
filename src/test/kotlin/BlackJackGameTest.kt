@@ -22,11 +22,14 @@ class BlackJackGameTest {
 
     @Test
     fun testPlayerWithHighestScore() {
-        val sam = Player("Sam")
+        val sam = Player("sam")
         val dealer = Player("dealer")
 
-        sam.draw(mutableListOf("2S", "7D"), numCards = 2)
-        dealer.draw(mutableListOf("A", "10H"), numCards = 2)
+        sam.draw(mutableListOf("S2", "D7"), numCards = 2)
+        dealer.draw(mutableListOf("DA", "H10"), numCards = 2)
+
+        val highestScorePlayer: Player = getPlayerWithHighestScore(listOf(sam, dealer))
+        assertEquals(highestScorePlayer, dealer)
 
     }
 
